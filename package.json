@@ -1,11 +1,11 @@
 {
-  "name": "todo-list",
+  "name": "tdl2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass src/css/main.scss dist/main.css",
-    "sass:watch": "sass --watch src/css/main.scss:dist/main.css",
+    "sass": "sass src/CSS/main.scss dist/main.css ",
+    "sass:watch": "sass src/CSS/main.scss dist/main.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

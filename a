@@ -1,0 +1,59 @@
+[33mcommit 27c31112b6f2c43a0f30b509f33c9619f42b3171[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: David Meir-Levy <davidmeirlevy@gmail.com>
+Date:   Sun Mar 1 20:52:32 2020 +0200
+
+    todo item color
+
+[33mcommit 2de06f75f8336f62431772ac8e4385fff120bf51[m
+Author: David Meir-Levy <davidmeirlevy@gmail.com>
+Date:   Sun Mar 1 20:47:31 2020 +0200
+
+    added label around input
+
+[33mcommit c26adbec081c30c4665171f227d43242068d72b3[m
+Author: David Meir-Levy <davidmeirlevy@gmail.com>
+Date:   Sun Mar 1 20:07:17 2020 +0200
+
+    added list and items styles
+
+[33mcommit 366ddf9796773431b5a5bfd3d4f16de2ddbad6c5[m
+Author: David Meir-Levy <davidmeirlevy@gmail.com>
+Date:   Sun Mar 1 19:59:33 2020 +0200
+
+    added sections styles
+
+[33mcommit 651f00257a75c1daaa869a652221d2245e4207d9[m
+Author: David Meir-Levy <davidmeirlevy@gmail.com>
+Date:   Sun Mar 1 19:45:44 2020 +0200
+
+    todo app main structure
+
+[33mcommit 9737e179ef0fa25fe31debf14162cb502508187c[m
+Author: David Meir-Levy <davidmeirlevy@gmail.com>
+Date:   Sun Mar 1 19:16:15 2020 +0200
+
+    todos html tags
+
+[33mcommit 27590e1f9bda1882fa65b48eeacc54e008592375[m
+Author: David Meir-Levy <davidmeirlevy@gmail.com>
+Date:   Sun Mar 1 18:58:04 2020 +0200
+
+    basic html & css
+
+[33mcommit 6c06ab9d4571cd085f8e0b0b314fe81fcd35dc1a[m
+Author: David Meir-Levy <davidmeirlevy@gmail.com>
+Date:   Sun Mar 1 18:36:16 2020 +0200
+
+    added npm script for sass
+
+[33mcommit 7cf65eb765d1e0d9bdfd10c1a0c39164680d6e36[m
+Author: David Meir-Levy <davidmeirlevy@gmail.com>
+Date:   Sun Mar 1 18:00:04 2020 +0200
+
+    reset css
+
+[33mcommit bbee6bd238251dc0ec34db3ecdeb11764129dd4e[m
+Author: David Meir-Levy <davidmeirlevy@gmail.com>
+Date:   Sun Mar 1 17:38:27 2020 +0200
+
+    intial commit
