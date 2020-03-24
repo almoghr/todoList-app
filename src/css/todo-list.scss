@@ -6,10 +6,12 @@
         height: 30px;
         display: flex;
         align-items: center;
-        color: green;
+        color: red;
 
         span{
             width: 100%;
+            font-weight: 700;
+            font-size: 16px;
         }
         button{
             width: 70px;

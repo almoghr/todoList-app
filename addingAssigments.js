@@ -19,7 +19,7 @@ body.addEventListener('keyup', (event) => {
 function createTodoItem(item) {
     const todo = document.createElement('div');
     todo.classList.add('todo-item')
-    todo.innerHTML =`<span>${item.content}</span>
+    todo.innerHTML =`<span class="span">${item.content}</span>
     <button class="todo-remove" todo-id="${item.id}">REMOVE</button>
     <button class="todo-done" todo-id="${item.id}">DONE</button>`
     return todo
