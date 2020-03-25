@@ -1,20 +1,25 @@
 .todo-list{
     display: flex;
     flex-direction: column;
-    .todo-item{
+    .todo-item-morning, .todo-item-night{
         border: 1px solid #eee;
         height: 30px;
         display: flex;
         align-items: center;
         color: red;
-
+    
         span{
             width: 100%;
             font-weight: 700;
             font-size: 16px;
+            border-right: none;
         }
         button{
             width: 70px;
         }
     }
+    .todo-item-night{
+        color: white;
+    }
+
 }

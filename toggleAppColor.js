@@ -1,10 +1,13 @@
 const colorToggler = document.querySelector('.toggle');
-const spanItem = document.querySelectorAll('span');
-console.log(spanItem);
+    
 
     colorToggler.addEventListener('click', (event) => {
+    let spanItem = document.querySelectorAll('.todo-item-morning');
     body.style.transition = 'ease-in-out 500ms'
-    body.classList.toggle('toggler')
-    list.style.transition = 'ease-in-out 500ms'
-    list.classList.toggle('toggler')
+    body.classList.toggle('toggler');
+    list.style.transition = 'ease-in-out 500ms';
+    list.classList.toggle('toggler');
+    spanItem.forEach(element => {
+        element.classList.toggle('todo-item-night')
+    });     
     })
