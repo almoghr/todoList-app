@@ -4,15 +4,14 @@ let doneTODOS = []
 const body = document.querySelector('body');
 const list = document.querySelector('.todo-list');
 const sections = document.querySelectorAll('.todo-sections button')
-const doneBTN = document.querySelector('.todo-sections button .todo-done');
-console.log(doneBTN);
+const doneBTN = document.querySelector('.todo-done');
 
 
 
 
 
 TDinp.addEventListener('keyup', (event) => {
-    if (TDinp.value && event.keyCode === 13){
+    if (TDinp.value && event.keyCode === 13) {
         const item = {
             id: 'todo_' + Date.now(),
             content: TDinp.value,
@@ -22,27 +21,36 @@ TDinp.addEventListener('keyup', (event) => {
         list.appendChild(createTodoItem(item))
     }
 });
-
 sections.forEach(section => {
     section.addEventListener('click', () => {
-        if (section.innerHTML === 'DONE'){
-            refereshTodoList(doneTODOS);
-            this.style.display = 'none'
-        } else{
-            refereshTodoList(todos)
+        if (section.innerHTML === 'DONE') {
+            refereshTodoList(doneTODOS, false);
+            list.classList.add('centered');
+            sections[0].classList.remove('active');
+            sections[1].classList.add('active');
+            TDinp.style.display = 'none';
+        } else {
+            refereshTodoList(todos, true)
+            list.classList.remove('centered');
+            sections[0].classList.add('active');
+            sections[1].classList.remove('active');
+            TDinp.style.display = 'block';
         }
-        refereshTodoList(section.innerHTML === 'DONE'? doneTODOS : todos)
-        
-    })
-    })
+    });
+})
 
-function createTodoItem(item) {
+function createTodoItem(item, shouldShowButtons) {
     const todo = document.createElement('div');
-    todo.classList.add('todo-item-morning');
+    list.classList.add('morning');
     todo.classList.add('todo-' + item.id);
-    todo.innerHTML =`<span>${item.content}</span>
-    <button class="todo-remove" todo-id="${item.id}">REMOVE</button>
-    <button class="todo-done" todo-id="${item.id}">DONE</button>`
+    todo.classList.add('todo')
+    if (shouldShowButtons === true || shouldShowButtons === undefined) {
+        todo.innerHTML = `<span>${item.content}</span>
+        <button class="todo-remove" todo-id="${item.id}">REMOVE</button>
+        <button class="todo-done" todo-id="${item.id}">DONE</button>`;    
+    } else {
+        todo.innerHTML = `<span>${item.content}</span>`;
+    }
     return todo
 }
 
@@ -51,34 +59,33 @@ list.addEventListener('click', (event) => {
 
     const target = event.target;
     const itemID = target.getAttribute('todo-id')
-    if(itemID){
-    if (target.classList.contains('todo-remove')){
-        todos = todos.filter (item => item.id !== itemID);
-    } else if (target.classList.contains('todo-done')){
-        const doneTodo = todos.find(item => item.id === itemID);
-        todos = todos.filter(item => item.id !== itemID);
-        doneTODOS.push(doneTodo);
-    }    list.querySelector('.todo-' + itemID).remove()
+    if (itemID) {
+        if (target.classList.contains('todo-remove')) {
+            todos = todos.filter(item => item.id !== itemID);
+        } else if (target.classList.contains('todo-done')) {
+            const doneTodo = todos.find(item => item.id === itemID);
+            todos = todos.filter(item => item.id !== itemID);
+            doneTODOS.push(doneTodo);
+        } list.querySelector('.todo-' + itemID).remove()
 
-}
-
+    }
 })
 
-function refereshTodoList(todos){
+function refereshTodoList(todos, shouldShowButtons) {
     list.innerHTML = '';
-    todos.forEach(todo => list.appendChild(createTodoItem(todo)))
+    todos.forEach(todo => list.appendChild(createTodoItem(todo, shouldShowButtons)))
 }
 
 const colorToggler = document.querySelector('.toggle');
-    
 
-    colorToggler.addEventListener('click', (event) => {
+
+colorToggler.addEventListener('click', (event) => {
     let spanItem = document.querySelectorAll('.todo-item-morning');
     body.style.transition = 'ease-in-out 500ms'
     body.classList.toggle('toggler');
     list.style.transition = 'ease-in-out 500ms';
     list.classList.toggle('toggler');
-    spanItem.forEach(element => {
-        element.classList.toggle('todo-item-night')
-    });     
-    })
+    list.classList.toggle('night');
+    list.classList.toggle('morning');
+
+})
