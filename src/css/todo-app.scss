@@ -12,6 +12,17 @@
             height: 50px;
             width: 100%; 
         }
+        .clear-local-storage{
+            width: 100%;
+            height: 50px;
+            white-space: wrap;
+            display: none;
+            border: 1px solid #ccc;
+            &:hover{
+                background-color:#eee;
+                color: blue;
+            }
+        }
     }
     .todo-sections{
         height: 50px;

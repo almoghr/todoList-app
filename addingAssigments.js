@@ -3,8 +3,10 @@ const TDinp = document.querySelector('.todo-input');
 let doneTODOS = []
 const body = document.querySelector('body');
 const list = document.querySelector('.todo-list');
-const sections = document.querySelectorAll('.todo-sections button')
-const doneBTN = document.querySelector('.todo-done');
+const sections = document.querySelectorAll('.todo-sections button');
+const clearBTN = document.querySelector('.clear-local-storage');
+
+
 
 
 
@@ -29,12 +31,14 @@ sections.forEach(section => {
             sections[0].classList.remove('active');
             sections[1].classList.add('active');
             TDinp.style.display = 'none';
+            clearBTN.style.display = 'block'
         } else {
             refereshTodoList(todos, true)
             list.classList.remove('centered');
             sections[0].classList.add('active');
             sections[1].classList.remove('active');
             TDinp.style.display = 'block';
+            clearBTN.style.display = 'none';
         }
     });
 })
