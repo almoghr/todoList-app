@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #eee;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggler {
+  background-color: #363636;
+}
+
+.todos-app {
+  width: 500px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.todos-app .input-wrap .todo-input {
+  height: 50px;
+  width: 100%;
+}
+.todos-app .input-wrap .clear-local-storage {
+  display: none;
+  width: 100%;
+  height: 50px;
+  border: 0;
+  background: #1E88E5;
+  color: white;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  white-space: wrap;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+.todos-app .input-wrap .clear-local-storage:hover {
+  background-color: #eee;
+  color: blue;
+}
+.todos-app .todo-sections {
+  height: 50px;
+}
+.todos-app .todo-list {
+  height: 100%;
+}
+.todos-app .toggle {
+  font-size: 20px;
+  width: 100%;
+  height: 50px;
+  border: 0;
+  background: #1E88E5;
+  color: white;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  white-space: wrap;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+.todo-sections {
+  display: flex;
+}
+.todo-sections > button {
+  width: 50%;
+  background: #1E88E5;
+  color: white;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  white-space: wrap;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.todo-sections > button:hover {
+  background-color: #eee;
+  color: blue;
+}
+.todo-sections > button.active {
+  background-color: #8cb691;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.todo-list.centered .todo span {
+  text-align: center;
+}
+.todo-list.morning .todo {
+  color: red;
+}
+.todo-list.night .todo {
+  color: white;
+}
+.todo-list .todo {
+  border: 1px solid #eee;
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+.todo-list .todo span {
+  width: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  border-right: none;
+}
+.todo-list .todo button {
+  transition: ease-in-out 0.3s;
+  width: 100px;
+  border: 0;
+  background: #1E88E5;
+  color: white;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  white-space: wrap;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  margin: 1rem 0.25rem;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+/*# sourceMappingURL=main.css.map */
