@@ -1,3 +1,7 @@
+// const ghpages = require('gh-pages');
+ 
+// ghpages.publish('src', function(err) {});
+
 let todos = [];
 const TDinp = document.querySelector('.todo-input');
 let doneTODOS = []
@@ -32,6 +36,10 @@ sections.forEach(section => {
             sections[1].classList.add('active');
             TDinp.style.display = 'none';
             clearBTN.style.display = 'block'
+            clearBTN.addEventListener('click', () => {
+                doneTODOS = []
+                refereshTodoList(doneTODOS, false)
+            })
         } else {
             refereshTodoList(todos, true)
             list.classList.remove('centered');

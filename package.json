@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass src/CSS/main.scss dist/main.css ",
-    "sass:watch": "sass src/CSS/main.scss dist/main.css --watch",
+    "sass": "sass scss/main.scss dist/main.css ",
+    "sass:watch": "sass scss/main.scss dist/main.css --watch",
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "node-sass": "^4.13.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
